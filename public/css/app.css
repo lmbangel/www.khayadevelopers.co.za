@@ -255,7 +255,12 @@
 
 .invalid-feedback {
   margin-left: 10%;
-  color: red;
+  color: #ff8800;
+}
+
+.form-text {
+  grid-area: footer;
+  visibility: hidden;
 }
 
 @media screen and (max-width: 1170px) {

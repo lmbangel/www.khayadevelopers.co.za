@@ -6,11 +6,14 @@
         <title>Khayalami Developers</title>
         {{-- Styles --}}
         <link rel="stylesheet" href="{{ secure_asset('css/app.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+        <link href="validation.min.css" rel="stylesheet">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 
         {{-- Scripts --}}
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <script src="validation.min.js"></script>
     </head>
 
     <body>
@@ -75,31 +78,33 @@
             <div class="contact-head">
                 <b>{{ __("CONTACT US")}}</b>
             </div>
+            @if(Session::has('flash_message'))
+                <div class="alert alert-success"> {{ Session::get('flash_message')}} </div>
+            @endif
             <div class="card-body contact-form" id="contact-form">
-                @if(Session::has('flash_message'))
-                    <div class="alert alert-success"> {{ Session::get('flash_message')}} </div>
-                @endif
                 <form action="{{ route('contact-us')}}" method="POST">
                     @csrf
                     <div>
-                        <input class="form-inf @error('name') is-invalid @enderror" type="text" id="fname" name="name" placeholder="Name"><br>
-                        @if ($errors->has('name'))
-                            <small class="form-text invalid-feedback"> {{ $errors->first('name')}} </small>
-                        @endif
+                        <input class="form-inf is-invalid" type="text" id="fname" name="name" 
+                        placeholder="@if($errors->has('name')){{ $errors->first('name')}}@else {{__('Name')}} @endif" required>
+                        <br>
                     </div>
                     <div>
-                        <input class="form-inf @error('email') is-invalid @enderror" type="text" id="email" name="email" placeholder="Email"><br>
-                        @if ($errors->has('email'))
-                            <small class="form-text invalid-feedback"> {{ $errors->first('email')}} </small>
-                        @endif
+                        <input class="form-inf is-invalid" type="text"
+                         id="email" name="email" placeholder="@if($errors->has('email')){{ $errors->first('email')}}@else {{__('Email')}} @endif"
+                         title="The domain portion of the email address is invalid (the portion after the @)." 
+                         pattern="^([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d
+                         \x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\
+                         x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22))*\x40([^\x00-\x
+                         20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\
+                         x5c[\x00-\x7f])*\x5d)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xf
+                         f]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d))*(\.\w{2,})+$" required><br>
                     </div>
                     <div>
-                        <textarea class="form-inf @error('message_body') is-invalid @enderror" id="subject" name="message_body" placeholder="Message"></textarea><br>
-                        @if ($errors->has('message_body'))
-                            <small class="form-text invalid-feedback"> {{ $errors->first('message_body')}} </small>
-                        @endif
+                        <textarea class="form-inf is-invalid" id="subject"
+                         name="message_body" placeholder="@if($errors->has('message_body')){{ $errors->first('message_body')}}@else {{__('Message')}} @endif" maxlength="225" required></textarea><br>
                     </div>
-                    <button class="form-btn" type="submit" value="Submit">Submit</button>
+                    <button class="form-btn" type="submit"  value="Submit">Submit</button>
                 </form>
             </div>
             
