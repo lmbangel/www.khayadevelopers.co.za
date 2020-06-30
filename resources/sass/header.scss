@@ -1,0 +1,49 @@
+.header-head{
+    grid-area: header;
+    grid-column-start: 2;
+    grid-column-end: 5;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 4vh;
+    padding-top: 40px;
+    margin-top: auto;
+    margin-bottom: auto;
+    text-align: center;
+    color: white;
+    transition: ease all 2s;
+}
+
+.logo-image{
+    grid-area: header;
+    grid-column-start: 1;
+    grid-column-end: 3;
+
+    margin-left: auto;
+    margin-right: auto;
+    width: 180px;
+    height: 150px;
+    transition: ease all 2s;
+}
+@media screen and (min-width: 910px)
+{
+    .logo-image{
+        width: 220px;
+        height: 180px;
+        transition: ease all 2s;
+    }
+}
+@media screen and (max-width: 695px)
+{
+       .header-head{
+        font-size: 0%;
+        transition: ease all 2s;
+    } 
+}
+@media screen and (max-width: 759px)
+{
+    .logo-image{
+        grid-column-start: 2;
+        grid-column-end: 5;
+        transition: ease all 2s;
+    }
+}

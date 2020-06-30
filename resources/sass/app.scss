@@ -1,0 +1,108 @@
+
+@import 'header','learn-more', 'about-us', 'services', 'contact', 'footer';
+
+body , html {
+    height: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: 35% 70px 22% auto 35% 10%;
+    // grid-template-rows: 35% 6.5% 18% auto 20% 10%;
+    grid-template-areas:
+            "header   header  header  header  header"
+            "learn    learn   learn   learn   learn"
+            "about    about   about   about   about"
+            "service  service service service service"
+            "contact  contact contact contact contact"
+            "footer   footer  footer  footer  footer";
+    transition: ease all 2s;
+}
+
+header{
+    grid-area: header;
+    background-image: url("../src/HeaderImage.png");
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+section:nth-last-of-type(3){
+    grid-area: learn;
+    background-color: red;
+}
+
+section:nth-last-of-type(2){
+    grid-area: about;
+    background-color: white;
+    background-image: url("../src/Jacket.png");
+    background-repeat: no-repeat;
+    background-position: 90% 40%;
+}
+
+main{
+    grid-area: service;
+    background-color: #d8d8d8;
+    background-image: url("../src/Tools.png");
+    background-repeat: no-repeat;
+    background-position: 1.5% 120%;
+}
+section:nth-last-of-type(1){
+    grid-area: contact;
+    background-color: red;
+    background-image: url("../src/Helmet.png");
+    background-repeat: no-repeat;
+    background-position: 1.5% 120%;
+}
+
+footer{
+    grid-area: footer;
+    background-color: black;
+}
+
+
+@media screen and (max-width: 695px)
+{
+    body{
+        grid-template-rows: 20% 50px auto auto auto 7%;
+        transition: ease all 2s;
+    }
+    .about-content{
+        margin-top: 14%;
+        transition: ease all 2s;
+    }
+    .contact-form{
+        grid-column-start: 1;
+        grid-column-end: 6;
+        width: 40vh;
+        height: 40vh;
+        padding-top: 10px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 15%;
+        margin-bottom: 7%;
+        transition: ease all 1s;
+    }
+    .contact-form .form-inf {
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-top: 4%;
+        font-size: large;
+        padding-left: 3%;
+        transition: ease all 1s;
+    }
+    .contact-form textarea{
+        height: 22vh;
+        transition: ease all 1s;
+    }
+}
+
+@media screen and (max-width: 414px)
+{
+        body{
+            grid-template-rows: 30% 0% auto auto auto 10%;
+            transition: ease all 2s;
+        }
+}

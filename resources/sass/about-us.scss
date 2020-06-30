@@ -1,0 +1,37 @@
+.header-abt{
+    text-align: center;
+    font-size: 2vh;
+    margin-bottom: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+// .header-abt::after{
+//     background-color: red; 
+//     content: '';
+//     height: 3px;
+//     display: block;
+//     position: absolute;
+//     // transform: translate(915%,0);
+//     width: 40px;
+// }
+
+.about-content{
+    grid-area: about;
+    grid-column-start: 2;
+    grid-column-end: 5;
+
+    margin-top: 5%;
+    margin-bottom: 20%;
+    transition: ease all 2s;
+    p{
+        font-size: medium;
+    }
+}
+
+@media screen and (max-width: 757px)
+{
+    .about-us-head{
+        -ms-transform: none;
+        transform: none;
+        transition: ease all 2s;
+    }
+}
