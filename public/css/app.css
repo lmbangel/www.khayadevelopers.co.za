@@ -358,9 +358,8 @@
   transition: ease all 1s;
 }
 
-.pin-add-2 {
-  display: none;
-  transition: ease all 1s;
+.call-add a img {
+  margin-top: 40px;
 }
 
 @media screen and (max-width: 1100px) {
@@ -371,6 +370,10 @@
     height: 100%;
     padding-left: 8%;
     transition: ease all 1s;
+  }
+
+  .call-add a img {
+    margin-top: 20px;
   }
 
   .cell-line {
@@ -395,6 +398,12 @@
     margin-top: 5px;
     transition: ease all 1s;
   }
+}
+
+a {
+  text-decoration: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
 }
 
 @media screen and (max-width: 380px) {

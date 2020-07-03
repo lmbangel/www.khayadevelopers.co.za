@@ -115,13 +115,17 @@
                     <p>{{ __("(+27) 62 041 0580")}}</p>
                     <p>{{ __("(+27) 21 007 4428")}}</p>
                 </div>
-                <img src="{{ asset("src/map-pin.svg")}}" alt="">
-                <div class="pin-add">
-                    <p>{{ __("4 Rand Rd") }}</p>
-                    <p>{{ __("Blackheath") }}</p>
-                    <p>{{ __("Cape Town")}}</p>
-                    <p>{{ __("7581")}}</p>
-                </div>
+                <a href="https://maps.google.com/?q=4 Rand Road, Blackheath, Cape Town, 7581">
+                    <img src="{{ asset("src/map-pin.svg")}}" alt="">
+                </a>
+                    <div class="pin-add">
+                        <a href="https://maps.google.com/?q=4 Rand Road, Blackheath, Cape Town, 7581">
+                        <p>{{ __("4 Rand Rd") }}</p>
+                        <p>{{ __("Blackheath") }}</p>
+                        <p>{{ __("Cape Town")}}</p>
+                        <p>{{ __("7581")}}</p>
+                        </a>
+                    </div>
             </div>
     </body>
 </html>
