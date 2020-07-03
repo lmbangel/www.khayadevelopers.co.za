@@ -122,9 +122,6 @@
                     <p>{{ __("Cape Town")}}</p>
                     <p>{{ __("7581")}}</p>
                 </div>
-                <div class="pin-add-2">
-                    <p>{{ __("4 Rand Rd") }} {{ __(" Blackheath") }} {{ __("Cape Town")}} {{ __("7581")}}</p>
-                </div>
             </div>
     </body>
 </html>

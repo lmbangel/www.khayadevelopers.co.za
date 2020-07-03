@@ -392,7 +392,26 @@
     color: #DCDCDC;
     font-size: small;
     text-align: right;
+    margin-top: 5px;
     transition: ease all 1s;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .call-add {
+    padding-left: 12%;
+    transition: ease all 1s;
+  }
+
+  .call-add p {
+    font-size: x-small;
+    transition: ease all 1s;
+  }
+
+  .call-add img {
+    margin-top: 20px;
+    width: 7vh;
+    height: 7vh;
   }
 }
 
