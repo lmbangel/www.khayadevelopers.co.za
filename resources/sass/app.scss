@@ -10,7 +10,7 @@ body {
     margin: 0;
     display: grid;
     grid-template-columns: 20% 20% 20% 20% 20%;
-    grid-template-rows: 35% 70px 22% auto 35% auto;
+    grid-template-rows: 35% 70px 22% auto 35% 10%;
     // grid-template-rows: 35% 6.5% 18% auto 20% 10%;
     grid-template-areas:
             "header   header  header  header  header"
@@ -62,6 +62,13 @@ footer{
     background-color: black;
 }
 
+@media screen and (max-width: 1100px)
+{
+        body{
+            grid-template-rows: 35% 70px 22% auto 35% auto;
+            transition: ease all 2s;
+        }
+}
 
 @media screen and (max-width: 695px)
 {
