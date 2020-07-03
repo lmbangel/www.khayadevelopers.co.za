@@ -107,7 +107,24 @@
                     <button class="form-btn" type="submit"  value="Submit">Submit</button>
                 </form>
             </div>
-            
+
         <footer></footer>
+            <div class="row call-add">
+                <img src="{{ asset("src/phone.svg")}}" alt="">
+                <div class="cell-line">
+                    <p>{{ __("(+27) 62 041 0580")}}</p>
+                    <p>{{ __("(+27) 21 007 4428")}}</p>
+                </div>
+                <img src="{{ asset("src/map-pin.svg")}}" alt="">
+                <div class="pin-add">
+                    <p>{{ __("4 Rand Rd") }}</p>
+                    <p>{{ __("Blackheath") }}</p>
+                    <p>{{ __("Cape Town")}}</p>
+                    <p>{{ __("7581")}}</p>
+                </div>
+                <div class="pin-add-2">
+                    <p>{{ __("4 Rand Rd") }} {{ __(" Blackheath") }} {{ __("Cape Town")}} {{ __("7581")}}</p>
+                </div>
+            </div>
     </body>
 </html>

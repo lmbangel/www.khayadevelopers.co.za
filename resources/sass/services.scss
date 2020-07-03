@@ -11,17 +11,15 @@
     transition: ease all 2s;
 }
 
-// .services-head::after{
-//     background-color: red; 
-//     content: '';
-//     display: block;
-//     height: 3px;
-//     position: absolute;
-//     left: 48%;
-//     right: 52%;
-//     width: 50px;
-// }
-
+.services-head::after{
+    background-color: red; 
+    content: '';
+    display: block;
+    height: 3px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 4vh;
+}
 .row{
     grid-area: service;
     grid-column-start: 2;
