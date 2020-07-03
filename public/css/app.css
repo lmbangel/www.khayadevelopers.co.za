@@ -132,7 +132,7 @@
   grid-area: about;
   grid-column-start: 2;
   grid-column-end: 5;
-  margin-top: 5%;
+  margin-top: 2%;
   margin-bottom: 20%;
   transition: ease all 2s;
 }
