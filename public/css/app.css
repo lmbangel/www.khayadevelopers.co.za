@@ -46,6 +46,15 @@
   }
 }
 
+/* +++++++++++LANDSCAPE+++++++++++ */
+
+@media screen and (orientation: landscape) and (max-width: 900px) {
+  .header-head {
+    font-size: 0%;
+    transition: ease all 1s;
+  }
+}
+
 .text-banner {
   grid-area: learn;
   grid-column-start: 2;
@@ -111,11 +120,32 @@
   }
 }
 
+/* +++++++++++LANDSCAPE+++++++++++ */
+
+@media screen and (orientation: landscape) and (max-width: 900px) {
+  .text-banner {
+    font-size: 0%;
+    transition: ease all 1s;
+  }
+
+  .btn-learn {
+    display: none !important;
+    transition: ease all 1s;
+  }
+}
+
+@media screen and (orientation: landscape) and (min-width: 1000px) {
+  .text-banner {
+    transition: ease all 1s;
+  }
+}
+
 .header-abt {
   text-align: center;
   font-size: 2vh;
   margin-bottom: 10px;
   font-family: Arial, Helvetica, sans-serif;
+  transition: ease all 1s;
 }
 
 .header-abt::after {
@@ -132,7 +162,9 @@
   grid-area: about;
   grid-column-start: 2;
   grid-column-end: 5;
-  margin-top: 2%;
+  grid-row-start: 3;
+  grid-row-end: 4;
+  margin-top: 5%;
   margin-bottom: 20%;
   transition: ease all 2s;
 }
@@ -145,6 +177,37 @@
   .about-us-head {
     transform: none;
     transition: ease all 2s;
+  }
+
+  .header-abt {
+    font-size: large;
+    transition: ease all 1s;
+  }
+
+  .about-content {
+    margin-bottom: 10%;
+    transition: ease all 1s;
+  }
+}
+
+/* +++++++++++LANDSCAPE+++++++++++ */
+
+@media screen and (orientation: landscape) and (max-width: 999px) {
+  .header-abt {
+    font-size: large;
+    transition: ease all 1s;
+  }
+
+  .about-content {
+    margin-bottom: 5%;
+    transition: ease all 1s;
+  }
+}
+
+@media screen and (orientation: landscape) and (min-width: 1000px) {
+  .about-content {
+    margin-bottom: 10%;
+    transition: ease all 1s;
   }
 }
 
@@ -215,6 +278,20 @@
 
   .column img {
     transition: ease all .5s;
+  }
+
+  .services-head {
+    font-size: large;
+    transition: ease all 1s;
+  }
+}
+
+/* +++++++++++LANDSCAPE+++++++++++ */
+
+@media screen and (orientation: landscape) and (max-width: 900px) {
+  .services-head {
+    font-size: large;
+    transition: ease all 1s;
   }
 }
 
@@ -315,6 +392,72 @@
     margin-right: auto;
     background-color: white;
     transition: ease all 1s;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .contact-form .form-btn {
+    width: 30%;
+    height: 4.3vh;
+    margin-left: 10%;
+    margin-top: 2%;
+    font-size: medium;
+    color: white;
+    background-color: red;
+    border: none;
+  }
+}
+
+/* +++++++++++LANDSCAPE+++++++++++ */
+
+@media screen and (orientation: landscape) and (max-width: 900px) {
+  .contact-head {
+    font-size: large;
+    transition: ease all 1s;
+  }
+
+  .contact-form {
+    grid-area: contact;
+    grid-column-start: 1;
+    grid-column-end: 6;
+    width: 50% !important;
+    height: 57vh !important;
+    margin-top: 8%;
+    margin-bottom: 5%;
+    background-color: white;
+    transition: ease all 1s;
+  }
+
+  .contact-form .form-inf {
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 4%;
+    font-size: medium;
+    padding-left: 3%;
+    border: none;
+    background-color: #DCDCDC;
+    transition: ease all 1s;
+  }
+
+  .contact-form textarea {
+    height: 15vh;
+    resize: none;
+  }
+
+  .contact-form input {
+    height: 6vh;
+  }
+
+  .contact-form .form-btn {
+    width: 30%;
+    height: 7vh;
+    margin-left: 10%;
+    margin-top: 2%;
+    font-size: medium;
+    color: white;
+    background-color: red;
+    border: none;
   }
 }
 
@@ -424,6 +567,8 @@ a {
   }
 }
 
+/* +++++++++++LANDSCAPE+++++++++++ */
+
 body,
 html {
   height: 100%;
@@ -445,6 +590,7 @@ header {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  display: block;
 }
 
 section:nth-last-of-type(3) {
@@ -458,6 +604,7 @@ section:nth-last-of-type(2) {
   background-image: url(/images/Jacket.png?683584509cb62ebccb6bc6857116d4e5);
   background-repeat: no-repeat;
   background-position: 90% 40%;
+  display: block;
 }
 
 main {
@@ -466,6 +613,7 @@ main {
   background-image: url(/images/Tools.png?09bdf615acdfc90929beddb8861ac46e);
   background-repeat: no-repeat;
   background-position: 1.5% 120%;
+  display: block;
 }
 
 section:nth-last-of-type(1) {
@@ -479,11 +627,19 @@ section:nth-last-of-type(1) {
 footer {
   grid-area: footer;
   background-color: black;
+  display: block;
 }
 
 @media screen and (max-width: 1100px) {
   body {
     grid-template-rows: 35% 70px 22% auto 35% auto;
+    transition: ease all 2s;
+  }
+}
+
+@media screen and (min-width: 1101px) {
+  body {
+    grid-template-rows: 35% 70px 22% auto 35% 8% !important;
     transition: ease all 2s;
   }
 }
@@ -530,6 +686,28 @@ footer {
   body {
     grid-template-rows: 30% 0% auto auto auto auto;
     transition: ease all 2s;
+  }
+}
+
+/* +++++++++++LANDSCAPE+++++++++++ */
+
+@media screen and (orientation: landscape) {
+  body,
+  html {
+    height: 100%;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    grid-template-rows: 50% 0% auto auto auto auto;
+    transition: ease all 1s;
+  }
+}
+
+@media screen and (orientation: landscape) and (min-width: 1000px) {
+  body {
+    grid-template-rows: 60% 70px auto auto auto auto;
+    transition: ease all 1s;
   }
 }
 

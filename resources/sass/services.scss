@@ -70,8 +70,23 @@
       transition: ease all .5s;
     }
     .column img{
-        // height: 50%;
         transition: ease all .5s;
+    }
+    .services-head{
+        font-size: large;
+        transition: ease all 1s;
+    }
+}
+
+/* +++++++++++LANDSCAPE+++++++++++ */
+
+@media screen and (orientation: landscape)
+{
+    @media screen and (max-width: 900px) {
+        .services-head{
+           font-size: large;
+           transition: ease all 1s;
+        }
     }
 
 }

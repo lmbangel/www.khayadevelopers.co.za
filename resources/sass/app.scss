@@ -10,7 +10,7 @@ body {
     margin: 0;
     display: grid;
     grid-template-columns: 20% 20% 20% 20% 20%;
-    grid-template-rows: 35% 70px 22% auto 35% 10%;
+    grid-template-rows: 35% 70px 22% auto 35% 10% ;
     // grid-template-rows: 35% 6.5% 18% auto 20% 10%;
     grid-template-areas:
             "header   header  header  header  header"
@@ -28,6 +28,7 @@ header{
     background-size:cover;
     background-repeat: no-repeat;
     background-position: center;
+    display: block;
 }
 section:nth-last-of-type(3){
     grid-area: learn;
@@ -40,6 +41,7 @@ section:nth-last-of-type(2){
     background-image: url("../src/Jacket.png");
     background-repeat: no-repeat;
     background-position: 90% 40%;
+    display: block;
 }
 
 main{
@@ -48,6 +50,7 @@ main{
     background-image: url("../src/Tools.png");
     background-repeat: no-repeat;
     background-position: 1.5% 120%;
+    display: block;
 }
 section:nth-last-of-type(1){
     grid-area: contact;
@@ -60,12 +63,20 @@ section:nth-last-of-type(1){
 footer{
     grid-area: footer;
     background-color: black;
+    display: block;
 }
 
 @media screen and (max-width: 1100px)
 {
         body{
             grid-template-rows: 35% 70px 22% auto 35% auto;
+            transition: ease all 2s;
+        }
+}
+@media screen and (min-width: 1101px)
+{
+        body{
+            grid-template-rows: 35% 70px 22% auto 35% 8% !important;
             transition: ease all 2s;
         }
 }
@@ -111,4 +122,25 @@ footer{
             grid-template-rows: 30% 0% auto auto auto auto;
             transition: ease all 2s;
         }
+}
+
+/* +++++++++++LANDSCAPE+++++++++++ */
+
+@media screen and (orientation: landscape)
+{
+    body , html {
+        height: 100%;
+      scroll-behavior: smooth;
+    }
+    body{
+        grid-template-rows: 50% 0% auto auto auto auto;
+        transition: ease all 1s;
+    }
+    @media screen and (min-width: 1000px){
+        body{
+            grid-template-rows: 60% 70px auto auto auto auto;
+            transition: ease all 1s;
+        }
+    }
+
 }

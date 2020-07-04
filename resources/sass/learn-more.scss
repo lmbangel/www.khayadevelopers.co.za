@@ -60,3 +60,27 @@
         transition: ease all 1s;
     }
 }
+
+/* +++++++++++LANDSCAPE+++++++++++ */
+
+@media screen and (orientation: landscape)
+{
+    @media screen and (max-width: 900px) {
+        .text-banner{
+           font-size: 0%;
+           transition: ease all 1s;
+        }
+        .btn-learn{
+            display: none !important;
+            transition: ease all 1s;
+        }
+    }
+    @media screen and (min-width: 1000px){
+        .text-banner{
+
+            transition: ease all 1s;
+        }
+    }
+    
+
+}

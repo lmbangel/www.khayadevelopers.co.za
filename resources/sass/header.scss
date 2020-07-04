@@ -47,3 +47,16 @@
         transition: ease all 2s;
     }
 }
+
+/* +++++++++++LANDSCAPE+++++++++++ */
+
+@media screen and (orientation: landscape)
+{
+    @media screen and (max-width: 900px) {
+        .header-head{
+           font-size: 0%;
+           transition: ease all 1s;
+        }
+    }
+
+}

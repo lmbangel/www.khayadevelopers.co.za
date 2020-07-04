@@ -3,6 +3,7 @@
     font-size: 2vh;
     margin-bottom: 10px;
     font-family: Arial, Helvetica, sans-serif;
+    transition: ease all 1s;
 }
 .header-abt::after{
     background-color: red; 
@@ -18,8 +19,10 @@
     grid-area: about;
     grid-column-start: 2;
     grid-column-end: 5;
+    grid-row-start: 3;
+    grid-row-end: 4;
 
-    margin-top: 2%;
+    margin-top: 5%;
     margin-bottom: 20%;
     transition: ease all 2s;
     p{
@@ -34,4 +37,36 @@
         transform: none;
         transition: ease all 2s;
     }
+    .header-abt{
+        font-size: large;
+        transition: ease all 1s;
+    }
+    .about-content{
+        margin-bottom: 10%;
+        transition: ease all 1s;
+    }
+}
+
+/* +++++++++++LANDSCAPE+++++++++++ */
+
+@media screen and (orientation: landscape)
+{
+    @media screen and (max-width: 999px) {
+        .header-abt{
+           font-size: large;
+           transition: ease all 1s;
+        }
+    
+        .about-content{
+            margin-bottom: 5%;
+            transition: ease all 1s;
+        }
+    }
+    @media screen and (min-width: 1000px){
+        .about-content{
+            margin-bottom: 10%;
+            transition: ease all 1s;
+        }
+    }
+
 }
